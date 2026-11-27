@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>window.MathJax={tex:{inlineMath:[["$","$"]]},svg:{fontCache:"local"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" async></script>
+<title>Ujian Akhir Semester Ganjil</title>
+<style>
+:root{--bg:#f1f0ff;--card:#fff;--tx:#1f2340;--mut:#6b6f8f;--pri:#6c4cf1;--pri2:#2bb7f5;--ok:#22b573;--dbt:#ffb020;--no:#d9dcee;--bad:#ef4565;--bd:#e2e0f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14152b;--card:#1e2040;--tx:#eceeff;--mut:#9ea3c9;--no:#3a3d66;--bd:#33366a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#14152b;--card:#1e2040;--tx:#eceeff;--mut:#9ea3c9;--no:#3a3d66;--bd:#33366a}
+*{box-sizing:border-box}
+html{font-size:112.5%}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;user-select:none;-webkit-user-select:none}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+.hero{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border-radius:20px;padding:22px;margin-bottom:16px}
+.hero h1{margin:0 0 4px;font-size:1.4rem}.hero p{margin:0;opacity:.9;font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;margin-bottom:14px}
+label{display:block;font-size:.8rem;font-weight:600;color:var(--mut);margin:12px 0 4px}
+input{width:100%;padding:12px;border-radius:12px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;user-select:text;-webkit-user-select:text}
+input:focus{outline:none;border-color:var(--pri)}select{width:100%;padding:12px;border-radius:12px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;font-family:inherit}select:focus{outline:none;border-color:var(--pri)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:12px 16px;font-weight:600}
+.btn{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;width:100%;margin-top:16px;font-size:1rem}
+.btn.sm{width:auto;margin:0}
+.ghost{background:var(--bg);color:var(--tx);border:1.5px solid var(--bd)}
+.err{color:var(--bad);font-size:.85rem;margin-top:10px;min-height:1.2em}
+details{font-size:.85rem;color:var(--mut);margin-top:14px}
+.tok{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:1.3rem;letter-spacing:.2em;color:var(--pri);font-weight:700;margin:6px 8px 0 0}
+ul.rule{margin:8px 0 0;padding-left:18px;font-size:.88rem;color:var(--mut);line-height:1.6}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border-radius:16px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}
+.top small{opacity:.85;display:block;font-size:.72rem}
+.timer{font-variant-numeric:tabular-nums;font-size:1.3rem;font-weight:700;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:12px}
+.timer.low{background:var(--bad);animation:p 1s infinite}@keyframes p{50%{opacity:.6}}
+.q{font-size:1.15rem;line-height:1.55;margin:6px 0 14px}
+.opt{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:var(--bg);color:var(--tx);border:2px solid var(--bd);margin-bottom:9px;padding:13px;font-weight:500}
+.opt span{min-width:0;overflow-x:auto;overflow-y:hidden}mjx-container{max-width:100%}.opt b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--no);display:grid;place-items:center;font-size:.8rem}
+.opt.sel{border-color:var(--pri);background:color-mix(in srgb,var(--pri) 14%,var(--bg))}.opt.sel b{background:var(--pri);color:#fff}
+.nav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px}
+.btn-d{background:var(--dbt);color:#3b2a00}.btn-d.on{outline:3px solid var(--dbt);outline-offset:2px;background:#ffcf5c}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:8px}
+.n{padding:10px 0;border-radius:10px;background:var(--no);color:var(--tx);font-weight:700}
+.n.a{background:var(--ok);color:#fff}.n.d{background:var(--dbt);color:#3b2a00}.n.c{outline:3px solid var(--pri);outline-offset:2px}
+.leg{display:flex;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--mut);margin-bottom:10px}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:5px;vertical-align:-1px}
+.score{text-align:center}.score .big{font-size:3.4rem;font-weight:800;background:linear-gradient(135deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;font-size:.9rem;margin-top:10px}.info span{color:var(--mut);font-size:.75rem;display:block}
+.rv{border-left:5px solid var(--pri)}
+.rv .tag{font-size:.75rem;font-weight:700;padding:3px 9px;border-radius:99px;color:#fff;background:var(--bad)}.rv.ok .tag{background:var(--ok)}
+.pb{background:var(--bg);border-radius:12px;padding:10px 12px;font-size:.9rem;margin-top:8px;line-height:1.5;border:1px dashed var(--pri)}
+.modal{position:fixed;inset:0;background:rgba(10,10,30,.75);display:none;place-items:center;z-index:50;padding:20px}
+.modal.show{display:grid}.modal .card{max-width:420px;text-align:center;margin:0}
+.hide{display:none!important}.sup table{width:100%;border-collapse:collapse;font-size:.82rem}.sup th,.sup td{padding:7px 6px;border-bottom:1px solid var(--bd);text-align:left;white-space:nowrap}.sup th{color:var(--mut);font-size:.72rem}.tw{overflow-x:auto}.chip{padding:2px 8px;border-radius:99px;font-size:.72rem;font-weight:700;background:var(--no)}.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}.stat b{display:block;font-size:1.4rem;color:var(--pri)}.stat span{font-size:.72rem;color:var(--mut)}textarea{width:100%;padding:10px;border-radius:12px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);font-family:ui-monospace,Menlo,monospace;font-size:.8rem;user-select:text;-webkit-user-select:text}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="s-start">
+  <div class="hero"><h1>📝 Ujian Akhir Semester Ganjil</h1><p>Tahun Ajaran 2026/2027 · Isi data diri dan masukkan token dari pengawas</p></div>
+  <div class="card">
+    <label>Nama Siswa</label><input id="f-nama" placeholder="Nama lengkap" autocomplete="off">
+    <div class="row">
+      <div><label>Kelas</label><select id="f-kelas"><option value="">Pilih kelas</option><option>XI MERDEKA 1</option><option>XI MERDEKA 2</option><option>XI MERDEKA 3</option><option>XI MERDEKA 4</option><option>XI MERDEKA 5</option><option>XI MERDEKA 6</option><option>XI MERDEKA 7</option></select></div>
+      <div><label>No. Peserta/NIS</label><input id="f-no" placeholder="No. peserta atau NIS" autocomplete="off" inputmode="numeric"></div>
+    </div>
+    <label>Asal Sekolah</label><input id="f-sek" value="SMAN 1 Penengahan" readonly style="opacity:.85" autocomplete="off">
+    <label>Token Ujian</label><input id="f-tok" placeholder="Token dari pengawas" autocomplete="off" maxlength="7" style="text-transform:uppercase;letter-spacing:.2em;font-weight:700">
+    <div id="net" style="font-size:.8rem;margin-top:10px;color:var(--mut)"></div>
+    <div class="err" id="err"></div>
+    <button class="btn" id="btn-start">Mulai Ujian</button>
+  </div>
+  <div class="card"><b>Tata tertib</b>
+    <ul class="rule">
+      <li>Waktu ujian 1 jam 30 menit, 60 soal Matematika Kelas XI, urutan soal dan pilihan diacak.</li>
+      <li>Dilarang membuka tab/jendela lain atau keluar dari layar penuh.</li>
+      <li>Peringatan kecurangan hanya <b>satu kali</b>. Pelanggaran kedua, ujian dihentikan otomatis dan dinilai.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-exam" class="hide">
+  <div class="top"><div><b id="x-nama"></b><small id="x-meta"></small></div><div class="timer" id="timer">1:30:00</div></div>
+  <div class="card">
+    <small style="color:var(--mut);font-weight:700" id="x-no"></small>
+    <div class="q" id="x-q"></div>
+    <div id="x-opts"></div>
+    <div class="nav">
+      <button class="ghost" id="b-prev">◀ Sebelumnya</button>
+      <button class="btn-d" id="b-dbt">Ragu-ragu</button>
+      <button class="ghost" id="b-next">Selanjutnya ▶</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="leg"><span><i style="background:var(--ok)"></i>Sudah dijawab</span><span><i style="background:var(--dbt)"></i>Ragu-ragu</span><span><i style="background:var(--no)"></i>Belum dijawab</span></div>
+    <div class="grid" id="grid"></div>
+    <button class="btn" id="b-fin">Selesai &amp; Kumpulkan</button>
+  </div>
+</section>
+
+<section id="s-sup" class="hide sup">
+  <div class="hero"><h1>🧑‍🏫 Panel Pengawas</h1><p>Tempel kode hasil siswa untuk merekap nilai</p></div>
+  <div class="card hide" id="sup-lock"><b>Akses ditolak</b><p style="color:var(--mut)">Halaman ini hanya bisa dibuka oleh pemilik ujian yang sedang login ke Claude.</p></div>
+  <div id="sup-body">
+    <div class="card"><b>Pantauan langsung</b><span id="lv-msg" style="color:var(--mut);font-size:.8rem;margin-left:8px"></span>
+      <div class="stat" style="margin:12px 0"><div><b id="lv-n">0</b><span>Peserta</span></div><div><b id="lv-d">0</b><span>Mengerjakan</span></div><div><b id="lv-s">0</b><span>Selesai</span></div><div><b id="lv-a">-</b><span>Rata-rata</span></div></div>
+      <div class="tw"><table><thead><tr><th>#</th><th>Nama</th><th>Kelas</th><th>No/NIS</th><th>Progres</th><th>Ragu</th><th>Pelanggaran</th><th>Jenis Pelanggaran</th><th>Sisa</th><th>Status</th><th>Nilai</th></tr></thead><tbody id="lv-tb"></tbody></table></div>
+      <button class="btn" id="lv-csv">Unduh Rekap Langsung (CSV)</button></div>
+    <div style="margin:4px 4px 10px;color:var(--mut);font-size:.82rem">Cadangan: rekap manual untuk siswa yang belum login</div>
+    <div class="card"><label style="margin-top:0">Tempel semua pesan WhatsApp sekaligus (kode terbaca otomatis)</label>
+      <textarea id="sup-in" rows="4" placeholder="Salin seluruh chat dari WhatsApp lalu tempel di sini"></textarea>
+      <div class="row" style="margin-top:10px"><button class="btn sm" id="sup-add">Tambahkan ke rekap</button><button class="ghost" id="sup-clr">Kosongkan rekap</button></div>
+      <div class="err" id="sup-msg"></div></div>
+    <div class="card"><div class="stat"><div><b id="st-n">0</b><span>Peserta</span></div><div><b id="st-a">-</b><span>Rata-rata</span></div><div><b id="st-h">-</b><span>Tertinggi</span></div><div><b id="st-l">-</b><span>Terendah</span></div></div></div>
+    <div class="card"><div class="tw"><table><thead><tr><th>#</th><th>Nama</th><th>Kelas</th><th>No. Peserta/NIS</th><th>Sekolah</th><th>Benar</th><th>Salah</th><th>Kosong</th><th>Nilai</th><th>Durasi</th><th>Status</th></tr></thead><tbody id="sup-tb"></tbody></table></div>
+      <button class="btn" id="sup-csv">Unduh Rekap (CSV)</button></div>
+  </div>
+</section>
+
+<section id="s-res" class="hide">
+  <div class="card score">
+    <div id="r-title" style="color:var(--mut)">Nilai Akhir</div>
+    <div class="big" id="r-score">0</div>
+    <div id="r-sum" style="color:var(--mut)"></div>
+    <div class="info" id="r-info"></div>
+  </div>
+  <div class="card"><b>Kode hasil</b><p style="color:var(--mut);font-size:.88rem;margin:4px 0 8px">Salin kode ini jika pengawas memintanya.</p>
+    <textarea id="r-code" rows="3" readonly></textarea><button class="ghost btn" id="r-copy">Salin Kode Hasil</button></div>
+  <h3 style="margin:18px 4px 10px">Rekap Jawaban Anda</h3>
+  <div id="r-rev"></div>
+</section>
+</div>
+
+<div class="modal" id="m-warn"><div class="card">
+  <div style="font-size:2.6rem">⚠️</div><h3 style="margin:6px 0">Peringatan Kecurangan!</h3>
+  <p id="m-txt" style="color:var(--mut);line-height:1.5"></p>
+  <p><b>Ini peringatan satu-satunya.</b> Pelanggaran berikutnya akan menghentikan ujian secara otomatis.</p>
+  <button class="btn" id="m-ok">Saya mengerti, lanjutkan</button>
+</div></div>
+<div class="modal" id="m-conf"><div class="card">
+  <h3 style="margin:0 0 6px">Kumpulkan jawaban?</h3><p id="c-txt" style="color:var(--mut)"></p>
+  <div class="row"><button class="ghost" id="c-no">Kembali</button><button class="btn sm" id="c-yes">Ya, kumpulkan</button></div>
+</div></div>
+
+<script>
+var BANK=[{"q": "Sebuah pabrik memproses bahan mentah seberat $x$ ton menjadi barang setengah jadi melalui fungsi biaya produksi $f(x)=2x+3$ (dalam juta rupiah). Selanjutnya, barang setengah jadi tersebut diolah menjadi produk akhir dengan nilai jual yang mengikuti fungsi $g(x)=3x^{2}-2$ (dalam juta rupiah). Rumus fungsi yang tepat untuk menentukan berat bahan mentah ($x$) secara langsung jika diketahui target nilai jual produk akhir sebesar $y$ juta rupiah adalah...", "o": ["${(g∘f)}^{-1}(y)=\\frac{\\sqrt{\\frac{y+2}{3}}-3}{2}$", "${(f∘g)}^{-1}(y)=\\frac{\\sqrt{\\frac{y+2}{3}}-3}{2}$", "${(g∘f)}^{-1}(y)=\\frac{\\sqrt{\\frac{y+2}{3}}-2}{3}$", "$(f^{-1}∘g^{-1})(y)=\\frac{\\sqrt{\\frac{y+3}{3}}-2}{2}$", "$(g^{-1}∘f^{-1})(y)=\\frac{\\sqrt{\\frac{y+2}{2}}-3}{3}$"], "a": 0}, {"q": "Diketahui fungsi rasional $f(x)=\\frac{x+2}{x-1}$ untuk $x≠1$. Jika diketahui fungsi komposisi $(f∘g)(x)=\\frac{3x+1}{x+1}$ untuk $x≠-1$, maka rumus fungsi $g(x)$ adalah...", "o": ["$\\frac{5x+3}{2x}$", "$\\frac{5x-3}{2x}$", "$\\frac{3x-5}{2x}$", "$-\\frac{3x+5}{2x}$", "$-\\frac{3x-5}{x-1}$"], "a": 0}, {"q": "Diberikan fungsi kuadrat $f(x)=x^{2}-6x+10$. Agar fungsi tersebut memiliki fungsi invers ($f^{-1}(x)$), daerah asal (domain) fungsi $f(x)$ dibatasi hanya untuk $x≥3$. Rumus fungsi invers $f^{-1}(x)$ untuk $x≥1$ adalah...", "o": ["$3-\\sqrt{x-1}$", "$3+\\sqrt{x-1}$", "$6+\\sqrt{x-1}$", "$-3+\\sqrt{x-1}$", "$3+\\sqrt{x+1}$"], "a": 1}, {"q": "Diketahui dua buah fungsi bijektif $f(x)=3x-5$ dan $g(x)=\\frac{2x+1}{x-3}$ untuk $x≠3$. Jika ${(f∘g)}^{-1}(a)=2$, maka nilai $a$ adalah...", "o": ["$-20$", "$-15$", "$-10$", "10", "20"], "a": 0}, {"q": "Diketahui tiga buah fungsi: $f(x)=2^{x}$, $g(x)=x+3$, dan $h(x)=3x-1$. Jika nilai dari komposisi fungsi $(f∘g∘h)(a)=32$, berapakah nilai dari $a$?", "o": ["1", "2", "3", "4", "5"], "a": 0}, {"q": "Diketahui fungsi $f(x)=2x+3$ dan $f∘g(x)={4x}^{2}-2x+1$. Fungsi $g(x)$ adalah ....", "o": ["${4x}^{2}-2x-2$", "${4x}^{2}+2x-2$", "${2x}^{2}-2x-2$", "${2x}^{2}-2x-1$", "${2x}^{2}-x-1$"], "a": 4}, {"q": "Diberikan suatu fungsi $f(x)=\\frac{x}{1-x}$ untuk $x≠1$. Jika $f^{2}(x)=(f∘f)(x)$, $f^{3}(x)=(f∘f∘f)(x)$, dan seterusnya, maka nilai dari komposisi berulang $f^{2026}(2)$ adalah...", "o": ["$-\\frac{2}{4051}$", "$-\\frac{2}{4052}$", "$\\frac{2}{4051}$", "$\\frac{2}{4052}$", "$\\frac{2}{4053}$"], "a": 0}, {"q": "Sebuah perusahaan penukaran valuta asing mengenakan dua tahap biaya transaksi untuk penukaran mata uang asing. Tahap pertama mengubah dolar ($x$) ke mata uang lokal melalui fungsi $f(x)=15.000x-50.000$ (biaya administrasi tetap dipotong). Tahap kedua mengenakan pajak progresif berupa fungsi $g(y)=0,95y$ dari total uang lokal $y$. Jika seorang investor menerima bersih uang sebesar Rp1.377.500.00, jumlah dolar ($x$) yang ia tukarkan di awal adalah ....", "o": ["90 dolar", "95 dolar", "100 dolar", "105 dolar", "110 dolar"], "a": 2}, {"q": "Diketahui fungsi $f(x)=2x+p$ dan $g(x)=3x-2$. Jika diketahui nilai dari $(f∘g)(2)=14$ dan $(g∘f)(-1)=4$, maka nilai dari $p^{2}-3p$ adalah...", "o": ["$-2$", "$0$", "$4$", "$10$", "$18$"], "a": 4}, {"q": "Diketahui $f(x){= }^{2}\\log{(x+1)}$ untuk $x>-1$ dan $g(x)=2^{3x}-1$. Nilai dari $(f∘g)(2)$ adalah...", "o": ["3", "5", "6", "8", "9"], "a": 2}, {"q": "Diberikan fungsi $f(x)=\\sqrt{2x-6}+1$. Jika $f^{-1}(x)$ merupakan invers dari fungsi $f(x)$. Rumus fungsi invers dari $f(x)$ adalah ....", "o": ["$f^{-1}(x)=\\frac{{(x-1)}^{2}+6}{2}$", "$f^{-1}(x)=\\frac{{(x-1)}^{2}-6}{2}$", "$f^{-1}(x)=\\frac{{(x+1)}^{2}+6}{2}$", "$f^{-1}(x)=\\frac{x^{2}-1}{2}+3$", "$f^{-1}(x)=\\frac{{(x-6)}^{2}+1}{2}$"], "a": 0}, {"q": "Jika diketahui tiga fungsi bijektif $f(x)=x+2$, $g(x)=2x$, dan $h(x)=3-x$, maka rumus fungsi dari ${(f∘g∘h)}^{-1}(x)$ adalah...", "o": ["$\\frac{8-x}{2}$", "$\\frac{x-8}{2}$", "$\\frac{2x-5}{2}$", "$8-2x$", "$2x-5$"], "a": 0}, {"q": "Sebuah kurva garis lurus merepresentasikan fungsi $f(x)=-3x+6$. Jika $f^{-1}(x)$ merupakan invers dari fungsi tersebut, maka titik potong grafik fungsi $f^{-1}(x)$ terhadap sumbu-$Y$ adalah ....", "o": ["$(-6,0)$", "$(-2,0)$", "$(2,0)$", "$(0,2)$", "$(0,6)$"], "a": 3}, {"q": "Sebuah kurva garis lurus merepresentasikan fungsi $f(x)=-3x+6$. Jika garis tersebut dicerminkan terhadap garis $y=x$, maka persamaan garis hasil pencerminan (yang merupakan inversnya, $f^{-1}(x)$) akan memotong sumbu-$y$ di titik...", "o": ["$(0,6)$", "$(0,2)$", "$(0,-2)$", "$(0,-4)$", "$(0,-6)$"], "a": 1}, {"q": "Diketahui fungsi $f(x)=\\sqrt{\\frac{1}{x^{2}-3x-10}}$. Domain fungsi $f(x)$ adalah ....", "o": ["$\\{x\\vert x<-2 atau x>5, x\\mathbb{∈R}\\}$", "$\\{x\\vert x<5 atau x>-2, x\\mathbb{∈R\\}}$", "$\\{x\\vert-2<x≤-5 , x\\mathbb{∈R\\}}$", "$\\{x\\vert-5<x<-2, x\\mathbb{∈R\\}}$", "$\\{x\\vert2<x<5, x\\mathbb{∈R\\}}$"], "a": 0}, {"q": "Diketahui fungsi bijektif $f(x)=\\frac{3x-2}{5}$ dan $g(x)=2x+1$. Jika $f^{-1}(k)=4$, maka nilai dari $(g∘f^{-1})(k)$ adalah...", "o": ["7", "8", "9", "10", "11"], "a": 2}, {"q": "Diketahui fungsi $f(x)=2x-1$ dan $(f∘g)(x)=4x^{2}-6x+3$. Nilai dari $g(-2)$ adalah...", "o": ["15", "16", "21", "24", "27"], "a": 1}, {"q": "Sebuah toko pakaian memberikan dua jenis potongan harga secara beruntun. Diskon pertama berupa kupon potongan harga langsung sebesar Rp50.000,00 yang direpresentasikan sebagai $f(x)=x-50.000$. Diskon kedua berupa potongan member sebesar $20\\%$ dari harga setelah diskon pertama, yang direpresentasikan sebagai $g(x)=0,8x$. Jika seseorang ingin membeli jaket dan kasir menghitungnya dengan komposisi $(g∘f)(x)$, berapa harga awal jaket tersebut ($x$) jika ia harus membayar sebesar Rp360.000,00?", "o": ["Rp450.000,00", "Rp480.000,00", "Rp500.000,00", "Rp520.000,00", "Rp550.000,00"], "a": 2}, {"q": "Diketahui $f(x)=\\frac{x}{x-1}$ untuk $x≠1$. Maka hasil dari $(f∘f∘f)(x)$ adalah ....", "o": ["$\\frac{x}{x-1}$", "$\\frac{1}{1-x}$", "$x$", "$\\frac{x-1}{x}$", "$1-x$"], "a": 0}, {"q": "Diketahui $f(x)=3^{x-1}$ dan $g(x)=2x+3$. Jika $(g∘f)(p)=21$, maka nilai dari $p$ adalah...", "o": ["1", "2", "3", "4", "5"], "a": 2}, {"q": "Sebuah pabrik memproduksi pakaian setiap bulan dengan jumlah yang membentuk barisan aritmetika. Pada bulan ke-3, pabrik tersebut memproduksi 4.200 potong pakaian, dan pada bulan ke-7, produksinya mencapai 6.600 potong. Jika pabrik tersebut beroperasi secara stabil dan terus menerus, total seluruh pakaian yang diproduksi oleh pabrik tersebut selama 1 tahun pertama adalah...", "o": ["$63.600$ potong", "$72.000$ potong", "$75.600$ potong", "$81.200$ potong", "$84.000$ potong"], "a": 2}, {"q": "Suatu daerah terserang wabah bakteri tertentu yang menyebabkan populasinya meluruh setengahnya setiap 4 jam sekali. Berdasarkan pengamatan awal pada pukul 08.00 pagi, jumlah bakteri tercatat sebanyak $4×10^{6}$ sel. Jika pada pengamatan berikutnya sisa populasi bakteri tersebut adalah $2,5×10^{5}$ sel, pengamatan terakhir dilakukan pada pukul ....", "o": ["20.00 hari yang sama", "00.00 dini hari berikutnya", "04.00 pagi hari berikutnya", "08.00 pagi hari berikutnya", "12.00 siang hari berikutnya"], "a": 1}, {"q": "Pak Budi menabungkan uang sebesar Rp10.000.000,00 di sebuah bank dengan sistem bunga majemuk sebesar $10\\%$per tahun, yang dihitung setiap akhir tahun. Setelah 3 tahun, seluruh uang tersebut diambil dan langsung dibelikan sebuah aset investasi lain yang nilainya tumbuh mengikuti pola barisan geometri. Jika pada akhir tahun ke-5 (2 tahun setelah pembelian aset) nilai aset tersebut menjadi Rp15.972.000,00, besar persentase pertumbuhan nilai aset tersebut per tahun adalah...", "o": ["$10\\%$", "$15\\%$", "$20\\%$", "$25\\%$", "$30\\%$"], "a": 2}, {"q": "Sebuah bola dijatuhkan dari ketinggian $H$ meter di atas lantai datar. Setiap kali bola memantul ke atas, ia mencapai ketinggian $\\frac{3}{5}$ dari ketinggian pantulan sebelumnya. Jika total panjang lintasan gerak bola dari awal dijatuhkan hingga bola tersebut berhenti sepenuhnya adalah 80 meter, maka ketinggian awal ($H$) bola tersebut ketika dijatuhkan adalah ....", "o": ["$12$ meter", "$15$ meter", "$18$ meter", "$20$ meter", "$24$ meter"], "a": 3}, {"q": "Ibu Siska ingin mendepositokan uangnya sebesar Rp50.000.000,00 selama 3 tahun. Bank A menawarkan skema bunga tunggal sebesar $12\\%$per tahun, sedangkan Bank B menawarkan skema bunga majemuk sebesar $10\\%$per tahun dengan perhitungan bunga per tahun. Manakah pernyataan berikut yang paling tepat mengenai keuntungan akhir dari kedua bank tersebut setelah 3 tahun?", "o": ["Bank A memberikan total saldo akhir yang lebih besar daripada Bank B sebesar Rp1.200.000,00.", "Bank B memberikan total saldo akhir yang lebih besar daripada Bank A sebesar Rp1.500.000,00.", "Bank A dan Bank B memberikan total saldo akhir yang persis sama, yaitu Rp68.000.000,00.", "Bank A memberikan total saldo akhir yang lebih besar daripada Bank A sebesar Rp1.450.000,00.", "Bank A memberikan total saldo akhir yang lebih besar daripada Bank B sebesar Rp850.000,00."], "a": 3}, {"q": "Pak Andi meminjam sejumlah uang di koperasi untuk modal usaha dan sepakat melunasinya dengan sistem anuitas atau deret aritmetika. Cicilan pada bulan pertama adalah Rp500.000,00, dan pada bulan-bulan berikutnya cicilan selalu bertambah tetap sebesar Rp50.000,00 dari bulan sebelumnya. Jika total seluruh angsuran yang telah dibayarkan Pak Andi hingga lunas adalah Rp19.500.000,00, berapa lamakah waktu yang dibutuhkan Pak Andi untuk melunasi pinjaman tersebut?", "o": ["20 bulan", "24 bulan", "25 bulan", "30 bulan", "36 bulan"], "a": 0}, {"q": "Suatu koloni bakteri pada awal pengamatan (pukul 07.00 pagi) berjumlah $P_{0}$ sel. Setiap 2 jam sekali, populasi bakteri tersebut membelah diri menjadi 3 kali lipat dari jumlah sebelumnya. Jika pada pukul 15.00 di hari yang sama total keseluruhan bakteri yang tercatat sejak awal pengamatan sampai saat itu adalah $2.430$ sel, jumlah bakteri mula-mula adalah ....", "o": ["10 sel", "20 sel", "30 sel", "40 sel", "50 sel"], "a": 2}, {"q": "Ibu Maya menanam modal sebesar Rp20.000.000,00 di sebuah instrumen investasi yang memberikan bunga majemuk sebesar $8\\%$ per tahun, dihitung setiap akhir tahun. Ia berencana mencairkan dana tersebut kelak ketika total saldo tabungannya mencapai sekurang-kurangnya Rp31.737.400,00. Berdasarkan data nilai logaritma $\\log{(1,08)}≈0,0334$ dan $\\log{(1,586)}≈0,2003$, waktu minimal investasi tersebut harus dibiarkan agar tujuannya tercapai adalah...", "o": ["4 tahun", "5 tahun", "6 tahun", "7 tahun", "8 tahun"], "a": 3}, {"q": "Sebuah laboratorium menggunakan serangkaian filter optik untuk mereduksi intensitas sinar laser. Filter pertama mereduksi intensitas cahaya hingga menyisakan $\\frac{3}{4}$ dari intensitas awal. Filter kedua mereduksi $\\frac{3}{4}$ dari sisa filter pertama, dan begitu seterusnya secara konsisten. Jika intensitas awal sinar laser adalah $1.024$ lumen, berapakah besar intensitas cahaya yang lolos setelah melewati filter ke-5?", "o": ["$243$ lumen", "$324$ lumen", "$432$ lumen", "$486$ lumen", "$576$ lumen"], "a": 0}, {"q": "Roni memulai program menabung harian dengan menyisihkan uang sakunya. Pada hari pertama ia menabung Rp5.000,00, hari kedua Rp7.000,00, hari ketiga Rp9.000,00, dan seterusnya selalu bertambah tetap setiap harinya. Jika total uang yang berhasil dikumpulkan Roni setelah sekian hari adalah Rp1.760.000,00, berapa hari Roni telah menjalankan program menabung tersebut?", "o": ["30 hari", "35 hari", "40 hari", "42 hari", "45 hari"], "a": 2}, {"q": "Pak Joko menanamkan modal sebesar Rp75.000.000,00 di sebuah instrumen keuangan dengan sistem bunga tunggal sebesar $8\\%$ per tahun. Setelah beberapa tahun, modal beserta total bunga yang diterimanya mencapai Rp123.000.000,00. Berapa lamakah modal tersebut diinvestasikan?", "o": ["6 tahun", "7 tahun", "8 tahun", "9 tahun", "10 tahun"], "a": 2}, {"q": "Ibu Ani menyimpan uang di bank sebesar Rp40.000.000,00 dengan suku bunga majemuk $5\\%$ per tahun. Di sisi lain, Pak Doni menyimpan uang sebesar Rp18.500.000,00 di bank berbeda dengan suku bunga majemuk $8\\%$ per tahun. Selisih nilai uang tabungan mereka berdua tepat pada akhir tahun ke-2 adalah... (Gunakan $1,05^{2}=1,1025$ dan $1,08^{2}=1,1664$)", "o": ["Rp240.000,00", "Rp320.000,00", "Rp450.000,00", "Rp520.000,00", "Rp680.000,00"], "a": 2}, {"q": "Tiga buah bilangan positif membentuk barisan aritmetika dengan beda $b>0$. Jika suku kedua dikurangi $1$, maka ketiga bilangan tersebut membentuk barisan geometri dengan rasio $2$. Jumlah ketiga bilangan tersebut adalah...", "o": ["12", "15", "18", "21", "24"], "a": 1}, {"q": "Sebuah persegi memiliki sisi berukuran $10$ cm. Di dalam persegi tersebut dibuat persegi kedua dengan menghubungkan titik-titik tengah sisi persegi pertama, lalu dibuat persegi ketiga dengan cara yang sama di dalam persegi kedua, dan seterusnya berlanjut hingga tak hingga. Jumlah luas seluruh persegi yang terbentuk adalah...", "o": ["$150{\\text{ cm}}^{2}$", "$180{\\text{ cm}}^{2}$", "$200{\\text{ cm}}^{2}$", "$250{\\text{ cm}}^{2}$", "$300{\\text{ cm}}^{2}$"], "a": 2}, {"q": "Seseorang ingin memiliki uang tunai sebesar Rp100.000.000,00 tepat 4 tahun dari sekarang untuk biaya pendidikan anaknya. Jika bank menawarkan produk investasi dengan suku bunga majemuk sebesar $10\\%$ per tahun (dihitung tahunan), berapa besar uang minimal yang harus disetorkan orang tersebut ke bank pada hari ini agar targetnya tercapai? (Diketahui ${(1,1)}^{-4}≈0,683$)", "o": ["Rp62.100.000,00", "Rp65.500.000,00", "Rp68.300.000,00", "Rp71.400.000,00", "Rp75.000.000,00"], "a": 2}, {"q": "Suatu barisan bilangan memiliki pola bertingkat dua, di mana selisih antar suku-sukunya membentuk barisan aritmetika. Diketahui empat suku pertama barisan tersebut adalah $3,7,13,21,…$. Suku ke-20 dari barisan tersebut adalah...", "o": ["380", "401", "421", "442", "460"], "a": 2}, {"q": "Sebuah koperasi simpan pinjam memberikan pinjaman dengan sistem bunga tunggal sebesar $1,5\\%$ per bulan. Pak Rudi meminjam uang sebesar Rp10.000.000,00. Jika setiap bulan ia dikenakan biaya administrasi tetap sebesar Rp50.000,00 di luar bunga, total pengembalian yang harus dibayar Pak Rudi jika ia melunasi pinjamannya tepat setelah 10 bulan adalah...", "o": ["Rp11.000.000,00", "Rp11.500.000,00", "Rp12.000.000,00", "Rp12.500.000,00", "Rp13.000.000,00"], "a": 2}, {"q": "Suatu negara berkembang mencatat pendapatan nasional pada tahun pertama adalah Rp600 triliun. Pemerintah menargetkan pertumbuhan ekonomi konstan sebesar $6\\%$ per tahun dari tahun sebelumnya. Berdasarkan konsep deret geometri, total akumulasi pendapatan nasional negara tersebut dari tahun pertama hingga akhir tahun ke-5 adalah... (Diketahui ${(1,06)}^{5}≈1,338$)", "o": ["Rp3.100 triliun", "Rp3.220 triliun", "Rp3.380 triliun", "Rp3.450 triliun", "Rp3.550 triliun"], "a": 2}, {"q": "Harga sebuah rumah mewah saat ini adalah Rp1.000.000.000,00 dan mengalami kenaikan (inflasi harga) sebesar $10\\%$ per tahun secara majemuk. Di sisi lain, Pak Budi memiliki uang tunai Rp1.000.000.000,00 yang didepositokan di bank dengan bunga majemuk $12\\%$ per tahun (pajak diabaikan). Setelah 2 tahun, berapakah selisih antara nilai uang tabungan Pak Budi dengan harga rumah tersebut?", "o": ["Rp22.000.000,00", "Rp44.400.000,00", "Rp50.000.000,00", "Rp52.400.000,00", "Rp60.000.000,00"], "a": 1}, {"q": "Jumlah $n$ suku pertama suatu deret aritmetika dirumuskan sebagai $S_{n}=2n^{2}+5n$. Jika $U_{k}$ menyatakan suku ke-$k$ dari deret tersebut, dan diketahui nilai $U_{k}=63$, maka nilai dari $k$ adalah...", "o": ["12", "13", "14", "15", "16"], "a": 3}, {"q": "Diketahui $f(x)=3x-2$ dan $g(x)=x^{2}+1$. Nilai dari $(f∘g)(2)$ adalah ....", "o": ["$13$", "$11$", "$15$", "$17$", "$25$"], "a": 0}, {"q": "Diketahui $f(x)=x+4$ dan $g(x)=2x-1$. Jika $(f∘g)(a)=9$, maka nilai $a$ adalah ....", "o": ["$3$", "$1$", "$2$", "$5$", "$6$"], "a": 0}, {"q": "Sebuah toko memberikan kupon potongan Rp20.000,00 yang dinyatakan $f(x)=x-20.000$, lalu diskon member $10\\%$ yang dinyatakan $g(x)=0,9x$. Jika kasir menghitung dengan $(g∘f)(x)$ dan pembeli membayar Rp135.000,00, harga awal barang tersebut adalah ....", "o": ["Rp170.000,00", "Rp155.000,00", "Rp165.000,00", "Rp175.000,00", "Rp180.000,00"], "a": 0}, {"q": "Diketahui $f(x)=2x+p$ dan $g(x)=x-4$. Jika $(f∘g)(5)=9$, maka nilai $f(3)$ adalah ....", "o": ["$13$", "$9$", "$11$", "$15$", "$17$"], "a": 0}, {"q": "Diketahui $f(x)=3x-1$ dan $(f∘g)(x)=6x+8$. Fungsi $g(x)$ adalah ....", "o": ["$2x+3$", "$2x+1$", "$3x+3$", "$6x+9$", "$2x-3$"], "a": 0}, {"q": "Invers dari fungsi $f(x)=3x-2$ adalah $f^{-1}(x)=$ ....", "o": ["$\\frac{x+2}{3}$", "$\\frac{x-2}{3}$", "$\\frac{2-x}{3}$", "$3x+2$", "$\\frac{3}{x+2}$"], "a": 0}, {"q": "Diketahui $f(x)=\\frac{2x+1}{x-3}$ untuk $x≠3$. Rumus fungsi invers $f^{-1}(x)$ adalah ....", "o": ["$\\frac{3x+1}{x-2}$, $x≠2$", "$\\frac{3x-1}{x-2}$, $x≠2$", "$\\frac{3x+1}{x+2}$, $x≠-2$", "$\\frac{x+3}{2x-1}$, $x≠\\frac{1}{2}$", "$\\frac{2x-3}{x+1}$, $x≠-1$"], "a": 0}, {"q": "Diketahui $f(x)=x^{2}-4x+7$ dengan daerah asal $x≥2$. Rumus fungsi invers $f^{-1}(x)$ untuk $x≥3$ adalah ....", "o": ["$2+\\sqrt{x-3}$", "$2-\\sqrt{x-3}$", "$4+\\sqrt{x-3}$", "$2+\\sqrt{x+3}$", "$-2+\\sqrt{x-3}$"], "a": 0}, {"q": "Diketahui $f(x)=2x+1$ dan $g(x)=x-3$. Rumus fungsi $(g∘f)^{-1}(x)$ adalah ....", "o": ["$\\frac{x+2}{2}$", "$\\frac{x+5}{2}$", "$\\frac{x-2}{2}$", "$2x+2$", "$\\frac{x+4}{2}$"], "a": 0}, {"q": "Diketahui $f(x)=3x+1$ dan $g(x)=x-2$. Nilai dari $(f∘g)^{-1}(7)$ adalah ....", "o": ["$4$", "$3$", "$5$", "$6$", "$8$"], "a": 0}, {"q": "Diketahui $f(x)=2x+5$ dan $g(x)=x-3$. Rumus fungsi $(g∘f)(x)$ adalah ....", "o": ["$2x+2$", "$2x-1$", "$2x+8$", "$2x+5$", "$2x-6$"], "a": 0}, {"q": "Diketahui $g(x)=x+3$ dan $(f∘g)(x)=x^{2}+6x+8$. Rumus fungsi $f(x)$ adalah ....", "o": ["$x^{2}-1$", "$x^{2}+1$", "$x^{2}-9$", "$x^{2}-3$", "$x^{2}+8$"], "a": 0}, {"q": "Diketahui $f(x)=2x-3$ dan $(g∘f)(x)=4x^{2}-12x+10$. Rumus fungsi $g(x)$ adalah ....", "o": ["$x^{2}+1$", "$x^{2}-1$", "$x^{2}+x+1$", "$2x^{2}+1$", "$x^{2}+2$"], "a": 0}, {"q": "Diketahui $f(x)=x+2$, $g(x)=3x$, dan $h(x)=x-1$. Nilai dari $(f∘g∘h)(4)$ adalah ....", "o": ["$11$", "$9$", "$13$", "$7$", "$14$"], "a": 0}, {"q": "Diketahui $f(x)=2x+1$ dan $g(x)=x^{2}$, nilai dari $(h∘g∘f)(2)$ dengan $h(x)=x-3$ adalah ....", "o": ["$22$", "$25$", "$19$", "$16$", "$28$"], "a": 0}, {"q": "Jika fungsi invers dari $f$ adalah $f^{-1}(x)=\\frac{x-4}{3}$, maka nilai $f(5)$ adalah ....", "o": ["$19$", "$17$", "$11$", "$9$", "$15$"], "a": 0}, {"q": "Fungsi linear $f(x)=ax+b$ memenuhi $f(1)=5$ dan $f(3)=11$. Nilai dari $f^{-1}(8)$ adalah ....", "o": ["$2$", "$1$", "$3$", "$4$", "$6$"], "a": 0}, {"q": "Diketahui $f(x)=2^{x-1}$. Nilai dari $f^{-1}(8)$ adalah ....", "o": ["$4$", "$3$", "$5$", "$2$", "$6$"], "a": 0}, {"q": "Fungsi konversi suhu dari Fahrenheit ke Celsius adalah $f(F)=\\frac{5}{9}(F-32)$. Dengan menggunakan fungsi invers $f^{-1}$, suhu $25$ °C setara dengan ... °F.", "o": ["$77$", "$45$", "$57$", "$68$", "$87$"], "a": 0}, {"q": "Diketahui $f(x)=3x+2$ dan $g(x)=x^{2}-1$. Nilai dari $(f^{-1}∘g)(3)$ adalah ....", "o": ["$2$", "$26$", "$8$", "$3$", "$4$"], "a": 0}];
+var DUR=90*60,$=function(i){return document.getElementById(i)};
+var token="",qs=[],ans=[],dbt=[],cur=0,left=DUR,tm=null,viol=0,running=false,lastV=0,fsOK=false,mod=false,user={};
+
+function genToken(){var c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",t="";for(var i=0;i<6;i++)t+=c[Math.floor(Math.random()*c.length)];token=t;$("tok-show").textContent=t}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x}return a}
+function show(id){["s-start","s-exam","s-res","s-sup"].forEach(function(s){$(s).classList.toggle("hide",s!==id)});window.scrollTo(0,0)}
+token="UAS2026";
+
+$("btn-start").onclick=function(){
+  var f={nama:$("f-nama").value.trim(),kelas:$("f-kelas").value.trim(),no:$("f-no").value.trim(),sek:$("f-sek").value.trim()},t=$("f-tok").value.trim().toUpperCase();
+  if(!f.nama||!f.kelas||!f.no||!f.sek){$("err").textContent="Semua data diri wajib diisi.";return}
+  if(t!==token){$("err").textContent="Token salah. Minta token ke pengawas ujian.";return}
+  $("err").textContent="";user=f;
+  qs=shuf(BANK).map(function(q){var idx=shuf(q.o.map(function(_,i){return i}));return{q:q.q,o:idx.map(function(i){return q.o[i]}),a:idx.indexOf(q.a),e:q.e}});
+  ans=qs.map(function(){return -1});dbt=qs.map(function(){return false});cur=0;left=DUR;viol=0;VL=[];
+  $("x-nama").textContent=f.nama;$("x-meta").textContent="Kelas "+f.kelas+" · No. "+f.no+" · "+f.sek;
+  var p=document.documentElement.requestFullscreen?document.documentElement.requestFullscreen():null;
+  if(p&&p.then){p.then(function(){fsOK=true}).catch(function(){fsOK=false})}
+  show("s-exam");running=true;render();tick();tm=setInterval(tick,1000);push("mengerjakan");hb=setInterval(function(){if(running)push("mengerjakan")},20000);
+};
+
+function tick(){
+  var hh=Math.floor(left/3600),m=Math.floor(left%3600/60),s=left%60;$("timer").textContent=hh+":"+(m<10?"0":"")+m+":"+(s<10?"0":"")+s;
+  $("timer").classList.toggle("low",left<=300);
+  if(left<=0){finish("Waktu habis, jawaban dikumpulkan otomatis.");return}left--;
+}
+function mj(el){try{if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([el]).catch(function(){})}catch(e){}}
+function render(){
+  var q=qs[cur];$("x-no").textContent="SOAL "+(cur+1)+" DARI "+qs.length;$("x-q").textContent=q.q;
+  $("x-opts").innerHTML="";
+  q.o.forEach(function(t,i){var b=document.createElement("button");b.className="opt"+(ans[cur]===i?" sel":"");
+    b.innerHTML="<b>"+"ABCDE"[i]+"</b><span></span>";b.lastChild.textContent=t;
+    b.onclick=function(){ans[cur]=i;render();pushT()};$("x-opts").appendChild(b)});
+  mj($("x-q"));mj($("x-opts"));
+  $("b-dbt").classList.toggle("on",dbt[cur]);$("b-dbt").textContent=dbt[cur]?"✓ Ragu-ragu":"Ragu-ragu";
+  $("b-prev").disabled=cur===0;$("b-prev").style.opacity=cur===0?.4:1;
+  $("b-next").disabled=cur===qs.length-1;$("b-next").style.opacity=cur===qs.length-1?.4:1;
+  $("grid").innerHTML="";
+  qs.forEach(function(_,i){var b=document.createElement("button");
+    b.className="n"+(dbt[i]?" d":ans[i]>=0?" a":"")+(i===cur?" c":"");b.textContent=i+1;
+    b.onclick=function(){cur=i;render()};$("grid").appendChild(b)});
+}
+$("b-prev").onclick=function(){if(cur>0){cur--;render()}};
+$("b-next").onclick=function(){if(cur<qs.length-1){cur++;render()}};
+$("b-dbt").onclick=function(){dbt[cur]=!dbt[cur];render();pushT()};
+$("b-fin").onclick=function(){
+  var un=ans.filter(function(a){return a<0}).length,d=dbt.filter(Boolean).length,t="";
+  if(un)t+=un+" soal belum dijawab. ";if(d)t+=d+" soal masih ragu-ragu. ";
+  $("c-txt").textContent=t||"Semua soal sudah dijawab.";$("m-conf").classList.add("show");mod=true;
+};
+$("c-no").onclick=function(){$("m-conf").classList.remove("show");mod=false};
+$("c-yes").onclick=function(){$("m-conf").classList.remove("show");mod=false;finish("Jawaban berhasil dikumpulkan.")};
+
+function violation(why){
+  if(!running)return;var n=Date.now();if(n-lastV<1500)return;lastV=n;viol++;VL.push(why);push("mengerjakan");
+  if(viol===1){$("m-txt").textContent="Terdeteksi: "+why+".";$("m-warn").classList.add("show");mod=true}
+  else finish("Ujian dihentikan karena pelanggaran kedua ("+why+").");
+}
+$("m-ok").onclick=function(){$("m-warn").classList.remove("show");mod=false;lastV=Date.now()+1500;
+  if(!document.fullscreenElement&&document.documentElement.requestFullscreen){document.documentElement.requestFullscreen().then(function(){fsOK=true}).catch(function(){})}};
+document.addEventListener("visibilitychange",function(){if(document.hidden)violation("berpindah tab atau membuka jendela lain")});
+window.addEventListener("blur",function(){violation("meninggalkan jendela ujian")});
+document.addEventListener("fullscreenchange",function(){if(fsOK&&!document.fullscreenElement)violation("keluar dari layar penuh")});
+["contextmenu","copy","cut","paste","dragstart"].forEach(function(e){document.addEventListener(e,function(ev){if(running&&ev.target.tagName!=="INPUT")ev.preventDefault()})});
+document.addEventListener("keydown",function(e){if(!running)return;
+  var k=e.key.toLowerCase();if(e.key==="F12"||e.key==="PrintScreen"||((e.ctrlKey||e.metaKey)&&["c","v","u","s","p","a"].indexOf(k)>-1)||(e.ctrlKey&&e.shiftKey&&["i","j","c"].indexOf(k)>-1))e.preventDefault()});
+window.addEventListener("beforeunload",function(e){if(running){e.preventDefault();e.returnValue=""}});
+
+function finish(msg){
+  if(!running)return;running=false;clearInterval(tm);
+  $("m-warn").classList.remove("show");$("m-conf").classList.remove("show");
+  if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(function(){});
+  var ok=0;qs.forEach(function(q,i){if(ans[i]===q.a)ok++});
+  var sc=Math.round(ok/qs.length*100);
+  $("r-score").textContent=sc;$("r-title").textContent=msg;
+  $("r-sum").textContent="Benar "+ok+" · Salah "+(qs.length-ok-ans.filter(function(a){return a<0}).length)+" · Kosong "+ans.filter(function(a){return a<0}).length;
+  $("r-info").innerHTML="";
+  [["Nama",user.nama],["Kelas",user.kelas],["No. Peserta/NIS",user.no],["Asal Sekolah",user.sek]].forEach(function(r){
+    var d=document.createElement("div");d.innerHTML="<span>"+r[0]+"</span><b></b>";d.lastChild.textContent=r[1];$("r-info").appendChild(d)});
+  $("r-rev").innerHTML="";
+  qs.forEach(function(q,i){
+    var good=ans[i]===q.a,c=document.createElement("div");c.className="card rv";
+    var yours=ans[i]>=0?"ABCDE"[ans[i]]+". "+q.o[ans[i]]:"(tidak dijawab)";
+    c.innerHTML='<p class="q" style="margin:10px 0 8px"></p><div style="font-size:.9rem;line-height:1.6"><div>Jawabanmu: <b class="y"></b></div></div><div class="pb e" style="display:none"></div>';
+    c.querySelector(".q").textContent=(i+1)+". "+q.q;c.querySelector(".y").textContent=yours;
+    if(q.e){var pe=c.querySelector(".e");pe.style.display="block";pe.textContent="Pembahasan: "+q.e}
+    $("r-rev").appendChild(c)});mj($("r-rev"));makeCode(ok,sc,msg);liveFinal(ok,sc,msg);
+  show("s-res");
+}
+
+var SALT="UAS2026-XI",WA_NO="";
+function hsh(s){var x=5381;for(var i=0;i<s.length;i++)x=((x<<5)+x+s.charCodeAt(i))|0;return (x>>>0).toString(36)}
+function makeCode(ok,sc,msg){
+  var ko=ans.filter(function(a){return a<0}).length,st=msg.indexOf("pelanggaran")>-1?"Dihentikan (pelanggaran)":msg.indexOf("Waktu habis")>-1?"Waktu habis":"Selesai";
+  var j=JSON.stringify({n:user.nama,k:user.kelas,p:user.no,s:user.sek,b:ok,f:qs.length-ok-ko,o:ko,v:sc,t:Math.max(0,DUR-left),x:st});
+  var b=btoa(unescape(encodeURIComponent(j)));
+  $("r-code").value="UAS-"+b+"."+hsh(b+SALT);
+  
+}
+$("r-copy").onclick=function(){var t=$("r-code");t.select();var d=false;try{d=document.execCommand("copy")}catch(e){}
+  if(!d&&navigator.clipboard)navigator.clipboard.writeText(t.value).catch(function(){});$("r-copy").textContent="Tersalin ✓"};
+var REK=[];
+function decode(c){
+  c=c.replace(/\s+/g,"");if(c.indexOf("UAS-")!==0)return null;c=c.slice(4);var i=c.lastIndexOf(".");if(i<0)return null;
+  var b=c.slice(0,i);if(hsh(b+SALT)!==c.slice(i+1))return null;
+  try{var o=JSON.parse(decodeURIComponent(escape(atob(b))));return typeof o.v==="number"?o:null}catch(e){return null}}
+function saveRek(){try{localStorage.setItem("uas_rekap",JSON.stringify(REK))}catch(e){}}
+function dur(s){return Math.floor(s/60)+" mnt "+(s%60)+" dtk"}
+function renderRek(){
+  var tb=$("sup-tb");tb.innerHTML="";
+  REK.slice().sort(function(a,b){return b.v-a.v}).forEach(function(o,i){
+    var tr=document.createElement("tr");
+    [i+1,o.n,o.k,o.p,o.s,o.b,o.f,o.o,o.v,dur(o.t),o.x].forEach(function(v,c){var td=document.createElement("td");td.textContent=v;if(c===8)td.style.fontWeight="800";tr.appendChild(td)});tb.appendChild(tr)});
+  var n=REK.length,v=REK.map(function(o){return o.v});
+  $("st-n").textContent=n;$("st-a").textContent=n?Math.round(v.reduce(function(a,b){return a+b},0)/n):"-";
+  $("st-h").textContent=n?Math.max.apply(null,v):"-";$("st-l").textContent=n?Math.min.apply(null,v):"-";}
+$("sup-add").onclick=function(){
+  var ls=($("sup-in").value.match(/UAS-[A-Za-z0-9+\/=\s]*?\.[a-z0-9]{1,7}/g)||[]),okc=0,bad=0;
+  ls.forEach(function(l){var o=decode(l);if(!o){bad++;return}
+    REK=REK.filter(function(r){return !(r.p===o.p&&r.n===o.n)});REK.push(o);okc++});
+  $("sup-msg").style.color=bad?"var(--bad)":"var(--ok)";
+  $("sup-msg").textContent=okc+" kode berhasil ditambahkan"+(bad?", "+bad+" kode tidak valid.":".");
+  $("sup-in").value="";saveRek();renderRek()};
+$("sup-clr").onclick=function(){if(REK.length&&confirm("Hapus seluruh rekap?")){REK=[];saveRek();renderRek()}};
+$("sup-csv").onclick=async function(){
+  var q=function(v){return '"'+String(v).replace(/"/g,'""')+'"'};
+  var rows=[["No","Nama","Kelas","No Peserta/NIS","Asal Sekolah","Benar","Salah","Kosong","Nilai","Durasi (detik)","Status"]];
+  REK.slice().sort(function(a,b){return b.v-a.v}).forEach(function(o,i){rows.push([i+1,o.n,o.k,o.p,o.s,o.b,o.f,o.o,o.v,o.t,o.x])});
+  var csv="\ufeff"+rows.map(function(r){return r.map(q).join(",")}).join("\r\n");
+  try{var d=await claude.use("downloads");if(!d)throw 0;await d.save({filename:"rekap-uas-matematika-xi.csv",data:csv})}
+  catch(e){$("sup-msg").style.color="var(--bad)";$("sup-msg").textContent="Unduhan tidak tersedia di tampilan ini."}};
+async function initSup(){
+  show("s-sup");var ok=false;
+  try{if(window.claude&&claude.use){var u=await claude.use("user");ok=u?await u.canEdit():false}}catch(e){}
+  $("sup-lock").classList.toggle("hide",ok);$("sup-body").classList.toggle("hide",!ok);
+  if(!ok)return;
+  if(DB){try{DB.collection("results").onSnapshot(function(s){LIVE=s.docs.map(function(d){return d.data()});$("lv-msg").textContent="● langsung";renderLive()},function(){$("lv-msg").textContent="Gagal memuat data langsung"})}catch(e){}setInterval(renderLive,10000)}
+  else $("lv-msg").textContent="Mode langsung tidak tersedia di tampilan ini";
+  try{REK=JSON.parse(localStorage.getItem("uas_rekap")||"[]")}catch(e){REK=[]}
+  renderRek()}
+
+window.addEventListener("hashchange",function(){if(location.hash==="#pengawas"&&!running)initSup()});
+
+var DB=null,UID=null,hb=null,lastW=0,pend=false,LIVE=[],VL=[];
+async function initDB(){
+  try{if(window.claude&&claude.use){var u=await claude.use("user");DB=await claude.use("db");if(DB&&u)UID=await u.id()}}catch(e){DB=null}
+  if(!UID)DB=null;
+  $("net").textContent=DB?"✓ Terhubung ke pengawas: hasil terkirim otomatis.":"⚠ Anda belum login ke Claude: hasil tidak terkirim otomatis. Hubungi pengawas setelah ujian."}
+var DBP=initDB();
+function push(status,extra){
+  if(!DB||!UID||!user.nama)return;
+  var d={nama:user.nama,kelas:user.kelas,no:user.no,sek:user.sek,status:status,dijawab:ans.filter(function(a){return a>=0}).length,ragu:dbt.filter(Boolean).length,total:qs.length,viol:viol,jenis:VL.join("; "),sisa:Math.max(0,left),t:Date.now()};
+  for(var k in (extra||{}))d[k]=extra[k];
+  try{DB.collection("results").doc(UID).set(d).catch(function(){})}catch(e){}}
+function pushT(){
+  if(Date.now()-lastW>4000){lastW=Date.now();push("mengerjakan")}
+  else if(!pend){pend=true;setTimeout(function(){pend=false;lastW=Date.now();if(running)push("mengerjakan")},4000)}}
+function liveFinal(ok,sc,msg){
+  clearInterval(hb);var ko=ans.filter(function(a){return a<0}).length,stop=msg.indexOf("pelanggaran")>-1;
+  push(stop?"dihentikan":"selesai",{ket:stop?"Dihentikan (pelanggaran)":msg.indexOf("Waktu habis")>-1?"Waktu habis":"Selesai",benar:ok,salah:qs.length-ok-ko,kosong:ko,nilai:sc,durasi:Math.max(0,DUR-left)})}
+function renderLive(){
+  var tb=$("lv-tb");if(!tb)return;tb.innerHTML="";var now=Date.now(),d=0,s=0,sum=0;
+  LIVE.slice().sort(function(a,b){return String(a.nama).localeCompare(String(b.nama))}).forEach(function(o,i){
+    var m=o.status==="mengerjakan",act=now-o.t<60000,st=m?(act?"Mengerjakan":"Terputus"):(o.ket||"Selesai");
+    if(m&&act)d++;if(!m){s++;sum+=o.nilai||0}
+    var tr=document.createElement("tr");
+    [i+1,o.nama,o.kelas,o.no,o.dijawab+"/"+o.total,o.ragu,o.viol,o.jenis||"-",m?Math.floor(o.sisa/60)+" mnt":"-",st,m?"-":o.nilai].forEach(function(v,c){
+      var td=document.createElement("td");td.textContent=v;if(c===6&&v>0)td.style.color="var(--bad)";if(c===10)td.style.fontWeight="800";tr.appendChild(td)});tb.appendChild(tr)});
+  $("lv-n").textContent=LIVE.length;$("lv-d").textContent=d;$("lv-s").textContent=s;$("lv-a").textContent=s?Math.round(sum/s):"-"}
+$("lv-csv").onclick=async function(){
+  var q=function(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"'};
+  var rows=[["No","Nama","Kelas","No Peserta/NIS","Asal Sekolah","Benar","Salah","Kosong","Nilai","Pelanggaran","Jenis Pelanggaran","Durasi (detik)","Status"]];
+  LIVE.slice().sort(function(a,b){return String(a.nama).localeCompare(String(b.nama))}).forEach(function(o,i){rows.push([i+1,o.nama,o.kelas,o.no,o.sek,o.benar,o.salah,o.kosong,o.nilai,o.viol,o.jenis||"",o.durasi,o.status==="mengerjakan"?"Mengerjakan":o.ket])});
+  var csv="\ufeff"+rows.map(function(r){return r.map(q).join(",")}).join("\r\n");
+  try{var dl=await claude.use("downloads");if(!dl)throw 0;await dl.save({filename:"rekap-langsung-uas.csv",data:csv})}catch(e){$("lv-msg").textContent="Unduhan tidak tersedia di tampilan ini"}};
+if(location.hash==="#pengawas")DBP.then(initSup);
+</script>
+</body>
+</html>
